@@ -11,14 +11,13 @@ let personalMovieDB = {
   privat: false,
 };
 
-let movies = {};
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = +prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = +prompt('На сколько оцените его?', '');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-let key = prompt('Один из последних просмотренных фильмов?');
-
-let score = +prompt('На сколько оцените его?');
-
-movies[key] = score;
-
-console.log(movies);
+console.log(personalMovieDB.movies);
 
  
