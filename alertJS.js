@@ -1,7 +1,33 @@
 
 'use strict';
 
-let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', 0 )
+let numberOfFilms = '';
+let a = '',
+    b = '',
+    c = '',
+    d = '';
+    
+while (numberOfFilms == '' || !numberOfFilms) {
+  numberOfFilms = +prompt('Сколько фильмво вы просмотрели?', '');
+};
+
+while (a == '' || a.length >= 50 || !a ) {
+  a = prompt('Какой из последних фильмов вы смотрели?', '');
+
+  while (b == '' || b.length >= 50 || !b ) {
+    b = +prompt('На сколько баллов вы его оценили?', '');
+  };
+
+};
+
+while (c == '' || c.length >= 50 || !c ) {
+  c = prompt('Какой из последних фильмов вы смотрели?', '');
+
+  while (d == '' || d.length >= 50 || !d ) {
+    d = +prompt('На сколько баллов вы его оценили?', '');
+  }
+
+}
 
 let personalMovieDB = {
   count: numberOfFilms,
@@ -9,15 +35,5 @@ let personalMovieDB = {
   actors: {},
   genres: [],
   privat: false,
-};
-
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = +prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = +prompt('На сколько оцените его?', '');
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
-console.log(personalMovieDB.movies);
-
- 
+}
+console.log(personalMovieDB);
