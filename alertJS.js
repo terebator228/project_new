@@ -11,22 +11,20 @@ while (numberOfFilms == '' || !numberOfFilms) {
     numberOfFilms = +prompt('Сколько фильмво вы просмотрели?', '');
 };
 
-while (a == '' || a.length >= 50 || !a ) {
+while (a.length >= 50 || !a ) {
     a = prompt('Какой из последних фильмов вы смотрели?', '');
-
-  while (b == '' || b.length >= 50 || !b ) {
-        b = +prompt('На сколько баллов вы его оценили?', '');
-    };
-
 };
 
-while (c == '' || c.length >= 50 || !c ) {
+while (b.length >= 50 || !b ) {
+    b = +prompt('На сколько баллов вы его оценили?', '');
+};
+
+while (c.length >= 50 || !c ) {
     c = prompt('Какой из последних фильмов вы смотрели?', '');
+}
 
-    while (d == '' || d.length >= 50 || !d ) {
-        d = +prompt('На сколько баллов вы его оценили?', '');
-    }
-
+while (d.length >= 50 || !d ) {
+    d = +prompt('На сколько баллов вы его оценили?', '');
 }
 
 let personalMovieDB = {
