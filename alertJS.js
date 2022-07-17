@@ -8,32 +8,39 @@ let a = '',
     d = '';
     
 while (numberOfFilms == '' || !numberOfFilms) {
-  numberOfFilms = +prompt('Сколько фильмво вы просмотрели?', '');
+    numberOfFilms = +prompt('Сколько фильмво вы просмотрели?', '');
 };
 
 while (a == '' || a.length >= 50 || !a ) {
-  a = prompt('Какой из последних фильмов вы смотрели?', '');
+    a = prompt('Какой из последних фильмов вы смотрели?', '');
 
   while (b == '' || b.length >= 50 || !b ) {
-    b = +prompt('На сколько баллов вы его оценили?', '');
-  };
+        b = +prompt('На сколько баллов вы его оценили?', '');
+    };
 
 };
 
 while (c == '' || c.length >= 50 || !c ) {
-  c = prompt('Какой из последних фильмов вы смотрели?', '');
+    c = prompt('Какой из последних фильмов вы смотрели?', '');
 
-  while (d == '' || d.length >= 50 || !d ) {
-    d = +prompt('На сколько баллов вы его оценили?', '');
-  }
+    while (d == '' || d.length >= 50 || !d ) {
+        d = +prompt('На сколько баллов вы его оценили?', '');
+    }
 
 }
 
 let personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false,
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
 }
-console.log(personalMovieDB);
+
+if(personalMovieDB.count < 10) {
+    alert("Просмотрено довольно мало фильмов", '')
+} else if(personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+    alert("Вы классический зритель", '');
+} else if(personalMovieDB.count > 30) {
+    alert("Вы киноман", '');
+};
