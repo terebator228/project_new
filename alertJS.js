@@ -4,10 +4,10 @@
 let numberOfFilms;
 
 function start() {
-    numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
+    numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '').trim();
 
     while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
+        numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '').trim();
     };
 };
 
@@ -23,8 +23,8 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
     for(let i = 0; i < 2; i++) {
-        let a = prompt('Какой из последних фильмов вы смотрели?', ''),
-            b = +prompt('На сколько баллов вы его оценили?', '');
+        let a = prompt('Какой из последних фильмов вы смотрели?', '').trim(),
+            b = +prompt('На сколько баллов вы его оценили?', '').trim();
     
         if(a.length >= 50 || !a || b.length >= 50 || !b) {
             console.log('Ошибка');
@@ -51,10 +51,10 @@ detectPersonalLevel();
 
 function writeYourGenres() {
     for(let i = 1; i <= 3; i++) {
-        let genre = prompt(`Ваш любимый жанр под номером ${i}`, "");
+        let genre = prompt(`Ваш любимый жанр под номером ${i}`, "").trim();
         
         while(!genre) {
-            genre = prompt(`Ваш любимый жанр под номером ${i}`, "");
+            genre = prompt(`Ваш любимый жанр под номером ${i}`, "").trim();
         };
         
         personalMovieDB.genres.push(genre);
