@@ -63,18 +63,5 @@ let personalMovieDB = {
     },
 };
 
-/*
-console.log(personalMovieDB.privat);
-console.log(personalMovieDB.showMyDB());
-personalMovieDB.toggleVisibleMyDB(personalMovieDB.privat);
-console.log(personalMovieDB.privat);
-console.log(personalMovieDB.showMyDB(personalMovieDB.privat));
-*/
 
-/*
-personalMovieDB.rememberMyFilms();
-personalMovieDB.detectPersonalLevel();
-personalMovieDB.writeYourGenres();
-personalMovieDB.showMyDB();
-*/
 
